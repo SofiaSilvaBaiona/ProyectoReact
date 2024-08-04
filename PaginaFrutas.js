@@ -1,0 +1,21 @@
+import React from "react";
+import ListaFrutas from "../componentes/listaFrutas";
+
+export default class PaginaFrutas extends React.Component {
+  frutas = [
+     {nombre: 'Platano', img: '/img/banana.webp', descripcion: 'Es originario del sudeste asiático y se ha cultivado durante miles de años. Hoy en día, los principales productores de plátanos son países de América Latina, África y Asia. La fruta es apreciada por su sabor dulce,su versatilidad en la cocina y sus beneficios para la salud.', beneficios:'Es una fruta rica en potasio, fibra y vitamina C. Sus beneficios incluyen la promoción de la salud digestiva, la función muscular y cardiovascular, la protección celular y la energía sostenida. También apoya la salud del sistema nervioso.' },
+     {nombre: 'Manzana', img: '/img/manzana.webp', descripcion: 'La manzana roja se origina en Asia Central. A lo largo de la historia, se ha cultivado en diversas regiones del mundo, adaptándose a diferentes climas. Es valorada por su sabor dulce, su versatilidad culinaria y sus posibles beneficios para la salud, lo que ha contribuido a su popularidad global.', beneficios: 'Además de su delicioso sabor, la manzana roja es una excelente fuente de fibra dietética, antioxidantes y vitaminas, como la vitamina C. Estos nutrientes pueden ayudar a mantener un sistema digestivo saludable, a fortalecer el sistema inmunológico y a proteger las células del cuerpo contra el daño causado por los radicales libres.'},     
+     {nombre: 'Naranja', img: '/img/naranja.jpg', descripcion: 'Es originaria de China, donde se cultivó por primera vez hace miles de años. Se propagó a otras partes del mundo, como India, el Mediterráneo y América, convirtiéndose en un cultivo importante. Actualmente, se cultiva en muchas regiones tropicales y subtropicales.', beneficios: 'Es una fruta cargada de vitamina C, que fortalece el sistema inmunológico y la piel. Además, su fibra mejora la digestión y la salud del corazón, mientras que sus antioxidantes protegen las células. Su alto contenido de agua también ayuda a mantenernos hidratados.' },
+     {nombre: 'Frutilla', img: '/img/frutilla.jpg', descripcion: 'La frutilla, también conocida como fresa, es originaria de Europa y Asia, donde crecía silvestre. Se empezó a cultivar en la Edad Media en jardines y monasterios europeos. Con la colonización europea, se introdujo en América, donde también se adaptó y se convirtió en un cultivo popular.', beneficios: 'Es una fruta deliciosa y saludable, rica en vitamina C y antioxidantes que protegen contra enfermedades. Su contenido de fibra favorece la digestión y la salud cardiovascular, mientras que su bajo contenido calórico la hace ideal para el control de peso. Además, posee propiedades antiinflamatorias y puede ayudar a reducir el colesterol y la presión arterial.'},
+     {nombre: 'Kiwi', img: '/img/kiwi.webp', descripcion: 'Es originario de China y se cultivaba hace más de 700 años. En el siglo 20, fue llevado a Nueva Zelanda, donde se adaptó bien y comenzó a cultivarse comercialmente. Hoy en día, el kiwi es un cultivo importante en Nueva Zelanda y se cultiva en muchas otras partes del mundo con climas similares.', beneficios: 'Es una fruta con numerosos beneficios para la salud. Es rico en vitamina C, fibra y antioxidantes, lo que lo hace excelente para el sistema inmunológico, la digestión y la salud cardiovascular. Además, su enzima actidina puede mejorar la digestión. Es una fruta versátil y deliciosa que se puede disfrutar de muchas maneras diferentes.'},
+  ]
+
+  render() {
+    return (
+      <>
+        <h6 className="my-5 p-3 pp align-items-center "><h1>Frutas</h1> Las frutas son partes comestibles de las plantas que ofrecen una amplia gama de beneficios para la salud. Son ricas en vitaminas, minerales, fibra y antioxidantes, lo que las convierte en una opción ideal para mantener una dieta equilibrada. Las frutas son bajas en calorías, promueven la salud digestiva, protegen contra enfermedades crónicas y ayudan a mantener la hidratación. Incorporar una variedad de frutas en la dieta diaria puede mejorar la salud y el bienestar general.</h6>
+        <ListaFrutas Nutri={this.frutas} />
+      </>
+    );
+  }
+}
